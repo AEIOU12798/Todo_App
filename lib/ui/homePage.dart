@@ -69,7 +69,7 @@ class _HomePageSTFState extends State<HomePageSTF> {
         child: FutureBuilder(
             future: todosData,
             builder: (context, snap) {
-              if (snap.hasData) {
+              if (snap.hasData) {}
               return ListView.builder(
                   itemCount: todos.length,
                   itemBuilder: (context, index) {
@@ -226,17 +226,6 @@ class _HomePageSTFState extends State<HomePageSTF> {
                       ],
                     );
                   });
-              }
-              else{
-                return const Center(child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                     Text('No Task',style: TextStyle(fontSize: 20.0),),
-                     SizedBox(height: 20.0,),
-                     Text('Tap + buttom to Add Task'),
-                  ],
-                ),);
-              }
             }),
       ),
     );
